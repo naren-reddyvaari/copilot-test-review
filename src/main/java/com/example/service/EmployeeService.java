@@ -102,7 +102,7 @@ public class EmployeeService {
                 .filter(employee -> "IT".equalsIgnoreCase(employee.getDept()) &&
                         employee.getSalary().compareTo(new BigDecimal("65000")) > 0)
                 .collect(Collectors.toList());*/
-
+        // The below for loop is for testing copilot review.
         List<Employee> tempList = new ArrayList<>();
         for(Employee emp : empList) {
             if("IT".equalsIgnoreCase(emp.getDept()) &&
