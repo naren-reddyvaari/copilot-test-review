@@ -16,5 +16,5 @@ jobs:
         uses: github/copilot-cli-action@latest
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          review-instructions: .github/github-copilot-instructions.md
+          review-instructions: .github/copilot-instructions.md
           review-target: ${{ github.event.pull_request.head.sha }}
