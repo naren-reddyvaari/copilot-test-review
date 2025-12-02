@@ -1,6 +1,10 @@
 
 name: Copilot PR Review
 
+permissions:
+  contents: read        # Allows reading repo contents
+  pull-requests: write  # Allows posting comments on PRs
+
 on:
   pull_request:
     types: [opened, synchronize]
