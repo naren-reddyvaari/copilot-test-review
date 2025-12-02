@@ -112,6 +112,7 @@ public class EmployeeService {
 
         }
 
+        System.out.println("number of emp: " + tempList.size());
         return tempList;
     }
 
