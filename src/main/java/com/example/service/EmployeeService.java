@@ -106,7 +106,7 @@ public class EmployeeService {
         List<Employee> tempList = new ArrayList<>();
         for(Employee emp : empList) {
             if("IT".equalsIgnoreCase(emp.getDept()) &&
-                    emp.getSalary().compareTo(new BigDecimal("65000")) > 0) {
+                    emp.getSalary().compareTo(new BigDecimal("70000")) > 0) {
                 tempList.add(emp);
             }
 
