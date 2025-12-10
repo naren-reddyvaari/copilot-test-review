@@ -21,7 +21,7 @@ jobs:
           echo "EOF" >> $GITHUB_ENV
 
       - name: Run Copilot Review
-        uses: github/copilot-cli-action@v1
+        uses: github/copilot-workflows/ai-pr-review@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           instructions: |
