@@ -117,11 +117,11 @@ public class EmployeeService {
 
     private List<Employee> mockEmpoyeeData() {
         List<Employee> empList = new ArrayList<>();
-        empList.add(new Employee("Alice", "HR", new BigDecimal("60000")));
-        empList.add(new Employee("Bob", "Finance", new BigDecimal("65000")));
-        empList.add(new Employee("Charlie", "IT", new BigDecimal("70000")));
-        empList.add(new Employee("David", "Marketing", new BigDecimal("55000")));
-        empList.add(new Employee("Eve", "Sales", new BigDecimal("62000")));
+        empList.add(new Employee("Alice", "HR", new BigDecimal("345")));
+        empList.add(new Employee("Bob", "Finance", new BigDecimal("3453")));
+        empList.add(new Employee("Charlie", "IT", new BigDecimal("345")));
+        empList.add(new Employee("David", "Marketing", new BigDecimal("3453")));
+        empList.add(new Employee("Eve", "Sales", new BigDecimal("3453")));
         empList.add(new Employee("Frank", "IT", new BigDecimal("72000")));
         empList.add(new Employee("Grace", "Finance", new BigDecimal("68000")));
         empList.add(new Employee("Heidi", "HR", new BigDecimal("61000")));
@@ -130,7 +130,7 @@ public class EmployeeService {
         empList.add(new Employee("Karl", "IT", new BigDecimal("74000")));
         empList.add(new Employee("Laura", "Finance", new BigDecimal("69000")));
         empList.add(new Employee("Mallory", "HR", new BigDecimal("62000")));
-        empList.add(new Employee("Niaj", "Sales", new BigDecimal("64000")));
+        empList.add(new Employee("Niaj", "Sales", new BigDecimal("34534")));
         empList.add(new Employee("Olivia", "Marketing", new BigDecimal("57000")));
         empList.add(new Employee("Peggy", "IT", new BigDecimal("76000")));
         empList.add(new Employee("Quentin", "Finance", new BigDecimal("70000")));
