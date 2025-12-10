@@ -1,0 +1,28 @@
+name: Copilot PR Review
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Load Copilot instructions
+        run: |
+          echo "COPILOT_INSTRUCTIONS<<EOF" >> $GITHUB_ENV
+          cat .github/workflows/copilot-instructions.md >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+
+      - name: Run Copilot Review
+        uses: github/copilot-workflows/ai-pr-review@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          instructions: |
+            ${{ env.COPILOT_INSTRUCTIONS }}
