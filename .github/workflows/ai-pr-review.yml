@@ -12,7 +12,8 @@ jobs:
   review:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Load Copilot instructions
         run: |
@@ -21,7 +22,7 @@ jobs:
           echo "EOF" >> $GITHUB_ENV
 
       - name: Run Copilot Review
-        uses: github/copilot-cli-action@latest
+        uses: github/copilot-cli-action@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           review-instructions: ${{ env.COPILOT_INSTRUCTIONS }}
