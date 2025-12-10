@@ -1,4 +1,4 @@
-name: Copilot PR Review
+name: Test Copilot PR Review
 
 on:
   pull_request:
