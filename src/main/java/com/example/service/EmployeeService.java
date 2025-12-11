@@ -136,7 +136,7 @@ public class EmployeeService {
         empList.add(new Employee("Quentin", "Finance", new BigDecimal("70000")));
         empList.add(new Employee("Rupert", "HR", new BigDecimal("23424")));
         empList.add(new Employee("Sybil", "Sales", new BigDecimal("65000")));
-        empList.add(new Employee("Trent", "Marketing", new BigDecimal("58000")));
+        empList.add(new Employee("Trent", "Marketing", new BigDecimal("34344")));
         return empList;
     }
 
