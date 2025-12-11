@@ -1,48 +1,36 @@
-# GitHub Copilot Instructions Template
+# GitHub Copilot Instructions
 
-## Purpose
-These instructions guide GitHub Copilot to follow our project's coding standards, performance guidelines, and naming conventions.
+This project follows global guidelines stored in a centralized repository:
 
-## General Principles
-- Write clean, readable, and maintainable code.
-- Add meaningful comments for complex logic.
-- Avoid hardcoded values; use constants or configuration files.
+- [Performance Guidelines](https://github.com/naren-reddyvaari/global-instructions/blob/main/global/performance.md)
+- [General Guidelines](https://github.com/naren-reddyvaari/global-instructions/blob/main/global/general.md).
+- [Naming Conventions](https://github.com/naren-reddyvaari/global-instructions/blob/main/global/naming.md)
+- [Security Best Practices](https://github.com/naren-reddyvaari/global-instructions/blob/main/global/security.md)
 
-## Language & Framework
-- Primary language: **Java**
-- Frameworks: Spring Boot, Hibernate
 
-## Naming Conventions
-- Classes: PascalCase (e.g., `CustomerService`)
-- Methods: camelCase (e.g., `calculateTotalAmount`)
-- Constants: UPPER_CASE (e.g., `MAX_RETRY_COUNT`)
-- Variables: descriptive camelCase (e.g., `customerList`)
+## Key Rules (Summary)
+- Use pagination for DB queries.
+- Prefer `StringBuilder` for string concatenation.
+- Do not log PII (see GDPR guidelines).
+- Follow PascalCase for classes and camelCase for methods.
+- Implement circuit breakers for external calls.
+- Use parameterized logging (avoid string concatenation in logs).
+- Validate all user inputs and avoid hardcoded secrets.
 
-## Performance Guidelines
-- Prefer Java Streams for collection processing.
-- Avoid nested loops; use efficient algorithms.
-- Use pagination for database queries.
-- Implement caching for frequently accessed data (e.g., Caffeine).
-- Avoid string concatenation in loops; use `StringBuilder`.
+## How Copilot should behave
+- Follow these rules when generating code, refactors, tests, or docs.
+- Prefer efficient, secure, and maintainable solutions.
+- If a rule must be relaxed, explain trade-offs in comments.
+- When asked to *optimize* or *review*, propose diffs and reference affected files.
 
-## Security Practices
-- Validate all user inputs.
-- Use parameterized queries to prevent SQL injection.
-- Do not log sensitive information.
+---
 
-## Logging
-- Use parameterized logging (e.g., `logger.info("User {} logged in", username)`).
-- Avoid excessive logging in performance-critical paths.
+## Example Prompts for PR Reviews
+- `@project Review this PR against performance and security guidelines.`
+- `@project Check this PR for GDPR compliance and logging standards.`
+- `@project Suggest improvements based on naming conventions and API design.`
+- `@project Optimize database queries and caching per performance.md.`
 
-## Error Handling
-- Use custom exceptions for business logic errors.
-- Avoid swallowing exceptions; log and rethrow if necessary.
+---
 
-## Testing
-- Write unit tests for all public methods.
-- Use JUnit and Mockito for testing.
-
-## When Suggesting Code
-- Follow these guidelines strictly.
-- If a rule conflicts, explain the trade-off in comments.
-- Provide optimized and secure solutions.
+For detailed rules, refer to the linked guideline files above.
