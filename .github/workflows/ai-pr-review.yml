@@ -20,7 +20,7 @@ jobs:
           echo "EOF" >> $GITHUB_OUTPUT
 
       - name: Run GitHub Copilot Review
-        uses: github/copilot-review@v1
+        uses: github/copilot-cli@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           instructions: ${{ steps.load_instructions.outputs.instructions }}
