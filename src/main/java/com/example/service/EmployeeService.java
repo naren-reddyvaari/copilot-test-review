@@ -128,15 +128,17 @@ public class EmployeeService {
         empList.add(new Employee("Ivan", "Sales", new BigDecimal("63000")));
         empList.add(new Employee("Judy", "Marketing", new BigDecimal("56000")));
         empList.add(new Employee("Karl", "IT", new BigDecimal("74000")));
-        empList.add(new Employee("Laura", "Finance", new BigDecimal("69000")));
+        empList.add(new Employee("Laura", "Finance", new BigDecimal("345")));
         empList.add(new Employee("Mallory", "HR", new BigDecimal("62000")));
         empList.add(new Employee("Niaj", "Sales", new BigDecimal("64000")));
         empList.add(new Employee("Olivia", "Marketing", new BigDecimal("57000")));
-        empList.add(new Employee("Peggy", "IT", new BigDecimal("76000")));
+        empList.add(new Employee("Peggy", "IT", new BigDecimal("345")));
         empList.add(new Employee("Quentin", "Finance", new BigDecimal("70000")));
-        empList.add(new Employee("Rupert", "HR", new BigDecimal("63000")));
+        empList.add(new Employee("Rupert", "HR", new BigDecimal("345")));
         empList.add(new Employee("Sybil", "Sales", new BigDecimal("65000")));
         empList.add(new Employee("Trent", "Marketing", new BigDecimal("58000")));
+       System.out.println("Mock employee data created with " + empList.size() + " records.");
+
         return empList;
     }
 
