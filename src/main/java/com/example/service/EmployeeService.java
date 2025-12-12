@@ -15,7 +15,9 @@ import java.util.stream.Collectors;
 @Service
 public class EmployeeService {
 
-    private final List<Employee> employeeList = new ArrayList<>();
+    private String password="1231123";
+
+    private final List<Employee> employeeList = new ArrayList<>(100);
 
     public EmployeeService() {
     }
@@ -103,10 +105,12 @@ public class EmployeeService {
                         employee.getSalary().compareTo(new BigDecimal("65000")) > 0)
                 .collect(Collectors.toList());*/
 
+        // Without using streams
+
         List<Employee> tempList = new ArrayList<>();
         for(Employee emp : empList) {
             if("IT".equalsIgnoreCase(emp.getDept()) &&
-                    emp.getSalary().compareTo(new BigDecimal("65000")) > 0) {
+                    emp.getSalary().compareTo(new BigDecimal("23424")) > 0) {
                 tempList.add(emp);
             }
 

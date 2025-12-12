@@ -72,4 +72,19 @@ public class Employee {
                 ", salary=" + salary +
                 '}';
     }
+
+    /**
+     * Returns a new Employee instance with an incremented salary.
+     *
+     * @param increment the amount to increase the salary by (must be positive)
+     * @return a new Employee with the updated salary
+     * @throws IllegalArgumentException if increment is null or not positive
+     */
+    public Employee withSalaryIncrement(BigDecimal increment) {
+        if (increment == null || increment.compareTo(BigDecimal.ZERO) <= 0) {
+            throw new IllegalArgumentException("Increment must be positive and not null");
+        }
+        return new Employee(this.name, this.dept, this.salary.add(increment));
+    }
+
 }
